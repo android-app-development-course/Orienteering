@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/answerDialogLinear_1"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1.见覅额外加爱剪辑没看见没开门我fads拉我了看我人来人往那恩努力了委内瑞拉来了来了安慰你你肯能看jkfkankankaln老卡了洛克菲勒看林肯 看回来了和来看看了可能看老人好林肯了你好可怜了来开发林肯了来开发！"
+            android:textSize="18sp"
+            android:textColor="#3A5FCD"/>
+
+    </LinearLayout>
+    <LinearLayout
+    android:id="@+id/answerDialogLinear_2"
+    android:layout_marginTop="200dp"
+    android:layout_marginLeft="70dp"
+    android:layout_marginRight="70dp"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    >
+
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/greenbutton"
+
+            />
+     <Button
+         android:id="@+id/false_button"
+         android:layout_marginLeft="20dp"
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:layout_height="match_parent"
+         android:background="@drawable/redbutton"
+         android:layout_marginStart="20dp" />
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/answerDialogLinear_3"
+        android:layout_below="@+id/answerDialogLinear_2"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="false"
+        android:max="5"
+        android:progress="0"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/answerDialogLinear_4"
+        android:layout_below="@+id/answerDialogLinear_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp">
+    <TextView
+        android:layout_width="55dp"
+        android:layout_height="30dp"
+        android:text="已答对:"
+        android:textSize="15sp"
+        android:textColor="#3A5FCD"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/answerDialogLinear_5"
+        android:layout_below="@+id/answerDialogLinear_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp">
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="0/5"
+            android:textSize="15sp" />
+    </LinearLayout>
+</RelativeLayout>

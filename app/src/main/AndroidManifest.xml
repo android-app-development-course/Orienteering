@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.scnu.sihao.orienteering">
+
+    <!-- 地图包、搜索包需要的基础权限 -->
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 添加mob权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 个推权限 -->
+    <!-- iBeancon功能所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.scnu.sihao.orienteering.Utils.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 设置XXactivity -->
+        <activity
+            android:name=".register.View.MainActivity"
+            android:label="@string/app_name" />
+        <!-- 设置地图activity -->
+        <activity android:name=".Map.View.MapActivity" />
+        <!-- 设置启动activity -->
+        <activity
+            android:name=".OpenActivity.OpenActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <!-- 设置为启动的首界面（开启动画） -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 设置Mobactivity -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 通过AndroidManifest配置AppKey和AppSecret，如果你选择通过代码配置，则不需要配置以下meta-data -->
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="22f4256b09b02" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="6ab3b5c226beb59e68eced87b29e2dc2" />
+        <!-- 地图的key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="26fdff715128e57e6f0ab3df379789ad"></meta-data>
+
+        <activity
+            android:name=".register.View.Register"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- 注册广播监听定位 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".Map.View.ShowTrailActivity" />
+        <activity android:name=".Map.AnswerQuestion.AnswerDialog" />
+        <!-- exported支持其它应用调用当前组件 -->
+        <!-- process应用程序的进程名 -->
+        <service
+            android:name=".Service.GeTuiService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice">
+
+        </service>
+        <service android:name=".Service.GetGTIntentService" />
+
+        <activity
+            android:name=".register.View.Login"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".register.View.btn_normal_rule"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".register.View.btn_goal_rule"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Map.View.SimpleMap"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Map.View.BeforeShowTrail"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
+
+        </activity>
+
+    </application>
+
+</manifest>

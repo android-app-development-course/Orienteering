@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--对话框样式处理-->
+    <style name="AnswerDialog" parent="android:style/Theme.Dialog">
+        <!--去除标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--去边框-->
+       <item name="android:windowFrame">@null</item>
+        <!--浮现在Activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景模糊处理-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--背景设为透明-->
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+
+    </style>
+</resources>

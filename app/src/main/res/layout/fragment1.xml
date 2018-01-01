@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/myScrollingContent"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/fragment1text"
+                android:text="---创建比赛---"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <LinearLayout
+                android:id="@+id/btn_list"
+                android:layout_below="@+id/fragment1text"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <Space
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/fragment_btn_formal"
+                    android:layout_below="@+id/fragment1text"
+                    android:layout_weight="10"
+                    android:background="@drawable/shape_regular"
+                    android:text="常规赛"
+                    android:textSize="30sp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+
+                    />
+                <Space
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/fragment_btn_gools"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/shape_goal"
+                    android:layout_below="@+id/fragment1text"
+                    android:layout_weight="10"
+                    android:text="积分赛"
+                    android:textSize="30sp" />
+                <Space
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragmenttext2"
+                android:layout_below="@+id/btn_list"
+                android:text="---加入比赛---"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Space
+                android:layout_weight="0.4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/layout_search"
+                android:layout_below="@+id/fragmenttext2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_search_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/editor"
+                    android:hint="请输入比赛名称"
+                    android:layout_weight="4"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/spingarr"
+                    />
+
+
+            </LinearLayout>
+            <ListView
+                android:id="@+id/lv"
+                android:layout_below="@+id/layout_search"
+                android:layout_marginBottom="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="96dp">
+
+            </ListView>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Data">
+        <item>起点</item>
+        <item>标记点1</item>
+        <item>标记点2</item>
+        <item>标记点3</item>
+        <item>标记点4</item>
+        <item>标记点5</item>
+        <item>标记点6</item>
+        <item>标记点7</item>
+        <item>标记点8</item>
+        <item>标记点9</item>
+        <item>标记点10</item>
+    </string-array>
+    <string-array name="spingarr">
+        <item>全部</item>
+        <item>普通赛</item>
+        <item>积分赛</item>
+    </string-array>
+    <string-array name="normal_map">
+        <item>地图①</item>
+        <item>地图②</item>
+        <item>地图③</item>
+    </string-array>
+    <string-array name="normal_private">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+</resources>

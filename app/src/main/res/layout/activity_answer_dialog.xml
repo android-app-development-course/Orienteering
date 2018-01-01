@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="480dp"
+    tools:context="com.scnu.sihao.orienteering.Map.AnswerQuestion.AnswerDialog"
+    android:background="@drawable/dialog2"
+    >
+
+    <TextView
+        android:id="@+id/question_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#3A5FCD"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:padding="40dp"/>
+
+    <ProgressBar
+        android:id="@+id/myProgress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question_body"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:indeterminate="false"
+        android:max="5"
+        android:progress="0"
+        android:layout_alignLeft="@id/getRight"
+        android:layout_marginRight="70dp"
+        />
+    <TextView
+        android:id="@+id/getRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已答对:"
+        android:textSize="18sp"
+        android:textColor="#3A5FCD"
+        android:layout_below="@id/myProgress_bar"
+        android:layout_marginLeft="80dp"/>
+
+    <TextView
+        android:id="@+id/right_Number"
+        android:layout_below="@+id/getRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/getRight"
+        android:text="0"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/right_Number2"
+        android:layout_below="@+id/getRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/right_Number"
+        android:text="/5"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/myTrue_button"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:background="@drawable/dialog1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="90dp"
+        android:text="正确"
+        android:textColor="#00CD00"
+        />
+    <Button
+        android:id="@+id/myWrong_button"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:background="@drawable/dialog1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_toRightOf="@+id/myTrue_button"
+        android:layout_marginLeft="45dp"
+        android:text="错误"
+        android:textColor="#EE4000"
+        />
+
+</RelativeLayout>

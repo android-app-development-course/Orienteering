@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.scnu.sihao.orienteering.Map.View.BeforeShowTrail"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/shape_btn_startcompile"
+    >
+
+    <TextView
+    android:id="@+id/textview0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="12月26日"
+        android:textSize="20sp"
+        android:background="@drawable/shape_btn_startcompile"
+    />
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_below="@+id/textview0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_btn_startcompile"
+        android:textSize="20sp"
+        android:text="12月25日"
+        />
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_below="@+id/textview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_btn_startcompile"
+        android:textSize="20sp"
+        android:text="12月17日"
+        />
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_below="@+id/textview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_btn_startcompile"
+        android:textSize="20sp"
+        android:text="12月12日"
+        />
+</RelativeLayout>
